@@ -1,0 +1,681 @@
+/* 版心1 */
+
+
+.container
+{
+    width: 1280px;
+    margin: 0 auto;
+    height: 720px;
+    background-color: #212454;
+    position: relative;
+
+}
+/* 首页 */
+/* #region顶部导航条 */
+.tobar
+{
+
+    width: 1278px;
+    height: 78px;
+   position:relative;
+   margin: 0 auto;
+   border: 1px solid rgba(31, 37,81, );
+   z-index: 10;
+   background-color: #212454;
+
+}
+
+    
+.T-left
+{
+    margin-left: 22px;
+    padding:18px 0px 0px 80px ;
+}
+   
+.T-center
+{
+    padding: 28.5px 350px 20px  330px;
+
+}
+.T-center ul{
+    color: #fff;
+   
+}
+
+.T-center ul li{
+    float: left;
+
+}
+.T-center ul li a{
+    font-size: 16px;
+    margin:0px 19px 2px 19px;
+    color: #fff;
+
+}
+.T-right{
+    position: absolute;
+    color: #fff;
+    width: 164px;
+    height: 32px;
+    padding: 6px 10px 6px 10px;
+    z-index: 3;
+    background-color:  #3a3a84;
+    right: 107px;
+    top: 18px;
+    display: flex;
+    flex-direction: row;
+    justify-self: flex-start;
+    align-items: center;
+    gap: 4;
+    border-radius: 8px;
+
+}
+.T-right a{
+    position: static;
+    width: 128px;
+    height: 19px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 4;
+    padding: 6px 10px 6px 10px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: left;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    /* margin: 0px 4px; */
+    line-height: 19px;
+    letter-spacing: 0%;
+    text-decoration-line: underline;
+}
+.T-right img{
+    position: static;
+    flex: none;
+    width: 32px;
+    height: 32px;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px;
+}
+/* .T-right a
+{
+font-size: 16px;
+position: absolute;
+right: 74px;
+top: 30.5px;
+color: #fff;
+text-align: center;
+border-bottom: 1px solid #fff;
+z-index: 5;
+
+}
+.T-right img{
+    position: absolute;
+    right: 210px;
+    top: 25px;
+} */
+/* #endregion顶部导航条 */
+/* #region主题 */
+.english span
+{
+    color: black;
+    font-size: 330px;
+    text-align: center;
+    line-height: 153.7%;
+    position: absolute;
+    font-family:;
+    font-weight: 900;
+    letter-spacing: -4%;
+    text-align: center;
+    text-transform: uppercase;
+    right: 10px;
+    left: 22px;
+    top: -49px;
+    z-index: 0;
+    -webkit-text-stroke: 1px white;
+    -webkit-text-fill-color: black;
+   
+}
+
+.main-img img
+{
+    position: absolute;
+    /* width:528px ;
+    height: 596px; */
+    top: 56px;
+    left: 320px;
+}
+.main-text1 
+{
+    position: absolute;
+    color: #fff;
+    font-size: 48px;
+    left: 72px;
+    bottom: 192px;
+    line-height: 56px;
+    letter-spacing: 0%;
+    text-align: left;
+    font-weight: 500;
+
+}
+.main-text1 p{
+    font-size: 14px;
+    line-height: 19px;
+    word-spacing: 10.5%;
+    font-family: "宋体";
+    margin-top: 5px;
+}
+.main-text2 span
+{
+    position: absolute;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 400;
+    color: #fff;
+    left: 72px;
+     top: 567px;
+    letter-spacing: 0%;
+    text-align: left;
+  
+}
+.M-notice{
+    position: absolute;
+    right: 305px;
+    bottom: 310px;
+    color: #fff;
+    line-height: 133.2%;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: left;
+}
+.M-intert1{
+   position: absolute;
+   right: 122px;
+   bottom: 243px;
+}
+
+.M-intert2 p:nth-child(1),
+.M-intert2 p:nth-child(2),
+.M-intert2 p:nth-child(3)
+{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 133.2%;
+    letter-spacing: 0%;
+    color: #fff;
+    font-family: "隶书";
+    
+}
+
+
+.M-intert2 p:nth-child(1){
+    position:absolute ;
+    bottom:170px ;
+    right: 152px;
+
+}
+.M-intert2 p:nth-child(2){
+    position:absolute ;
+    right: 73px;
+    bottom: 97px;;
+    
+}
+.M-intert2 p:nth-child(3)
+{position: absolute;
+ left: 941px; 
+ bottom: 62px;
+
+}
+/* #endregion主题 */
+
+/* 作品 */
+/*版心2  */
+.container2
+{
+    width: 1280px;
+    margin:  0 auto;
+    height: 720px;
+    background-color:  #3a3a84; 
+    position: relative;
+    z-index: 0;
+}
+/* #region中部导航 */
+.tobar2{
+    position: absolute;
+    width: 592px;
+    height: 55px;
+    left: 344px;
+    top: 112px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 32;
+    padding: 6px 0px 6px 0px ;
+    border-radius: 8px;
+    background-color: rgb(21, 29,107);
+   
+}
+.tobar2 nav ul li:nth-child(1) a{
+    position: absolute;
+    width: 112px;
+    height: 19px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding:12px 16px 12px 16px ;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0 32px;
+    border-radius:8px ;
+    border: 1px;
+    /* background-color:rgba(0, 255, 174, 0.169); */
+   left: 112px;
+    top: 12px;
+    
+}
+.tobar2 nav ul li:nth-child(2) a
+{
+    position:absolute;
+    width: 96px;
+    height: 19px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding:12px 16px 12px 16px ;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0 32px;
+    border-radius:8px ;
+    border: 1px;
+  /* background-color:rgba(0, 255, 174, 0.169); */
+    right: 112px;
+    top: 12px;
+}
+.tobar2 a
+{
+    color: rgb(255,255,255);
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.tobar2 nav a:active,
+.tobar2 nav a:hover
+{
+background-color: #353a84;
+
+
+}
+/* #endregion中部导航 */
+
+/* #region中部内容 */
+
+.exercise span{
+    
+    width: 276px;
+    height: 362px;
+    border-radius: 8px;
+    background-color:rgb(21,29,107) ;
+    position: relative;
+}
+
+.exercise span:nth-child(1){
+    position: absolute;
+    left: 200px;
+    top: 199px;
+}
+.exercise span:nth-child(2){
+    position: absolute;
+    left: 502px;
+    top: 199px;
+}
+.exercise span:nth-child(3){
+    position: absolute;
+    left: 804px;
+    top: 199px;
+}
+.exercise span img{
+    position: absolute;
+    left: 16px;
+    top: 16px;
+}
+.exercise span p {
+    position: absolute;
+    left: 16px;
+    top: 232px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: 0%;
+    text-align: left;
+    color: #fff;
+
+}
+.exercise span a{
+    position: absolute;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0%;
+    text-align: left;
+    color: #000a69; 
+    background-color: #717ef1;
+    border-radius: 40px;
+    left: 16px;
+    padding: 6px 10px 6px 10px;
+    top:265px ;
+}
+.exercise span h3{
+    position: absolute;
+    right: 11px;
+    top: 290px;
+    color: rgba(255, 255, 255, 0.09);
+font-family: "宋体";
+font-size: 57px;
+font-weight: 400;
+line-height: 69px;
+letter-spacing: 0%;
+text-align: right;
+}
+
+
+.exercise span:nth-child(2) a{
+    margin-top: 12px;
+}
+#tab1 span:nth-child(1) a,
+#tab1 span:nth-child(2) a 
+{
+position: absolute;
+top: 286px;
+margin: 0px;
+}
+
+#tab1{
+    display: block;
+}
+
+#tab2{
+    display: none;
+}
+#tab1:target{
+    display:block;
+
+}
+#tab2:target{
+    display: block;
+}
+#tab1:target~#tab1,
+#tab2:target~#tab2
+{
+    display: none;
+}
+/* #endregion中部内容 */
+
+
+/*#region 博客内容 */
+.frame
+{
+    position: absolute;
+    width: 880px;
+    height: 410px;
+    left: 200px;
+    top: 155px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 48px;
+    background-color: #353a84;
+}
+/* 关于博客 */
+.about
+{
+    position: absolute;
+width: 72px;
+height: 21px;
+left: 404px;
+top: 72px;
+color: rgb(255, 255, 255);
+font-family: HarmonyOS Sans SC;
+font-size: 18px;
+font-weight: 500;
+line-height: 21px;
+letter-spacing: 0%;
+text-align: left;
+}
+.frame .content p
+{
+position: absolute;
+width: 736px;
+height: 88px;
+left: 72px;
+top: 133px;
+color: rgb(255, 255, 255);
+font-family: HarmonyOS Sans SC;
+font-size: 14px;
+font-weight: 400;
+line-height: 16px;
+letter-spacing: 0%;
+text-align: justify;
+text-indent: 2em;
+}
+ /* 语雀地址：www.yuque.com/lisanqiu */
+.site a
+{
+text-decoration-skip: none;
+position: absolute;
+/* width: 231px; */
+/* height: 16px; */
+left: 72px;
+top: 322px;
+color: rgb(255, 255, 255);
+font-family: Arial, sans-serif;
+font-size: 14px;
+font-weight: 500;
+line-height: 16px;
+letter-spacing: 0%;
+text-align: left;
+/* text-decoration-line: underline !important; */
+border-bottom: 1px solid white;
+}
+
+/*#endregion 博客内容 */
+
+
+/* #region关于我 */
+
+ /* 关于我 */
+
+ .my
+ {
+    
+ position: absolute;
+ width: 54px;
+ height: 21px;
+ left: 413px;
+ top: 72px;
+ color: rgb(255, 255, 255);
+font-family: HarmonyOS Sans SC;
+font-size: 18px;
+font-weight: 500;
+line-height: 21px;
+letter-spacing: 0%;
+text-align: left;
+ }
+
+/* 增强效率，快乐摸鱼 就随便写写，仅供参考 */
+
+
+.content2{
+    
+position: absolute;
+width: 760px;
+height: 44px;
+left: 60px;
+top: 183px;
+color: rgb(255, 255, 255);
+font-family: HarmonyOS Sans SC;
+font-size: 14px;
+font-weight: 400;
+line-height: 16px;
+letter-spacing: 0%;
+text-align: center;
+}
+.site2 ul{
+/* Frame 64 */
+position: absolute;
+width: 752px;
+height: 24px;
+left: 64px;
+top: 350px;
+/* 自动布局 */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 0px;
+color: rgb(255, 255, 255);
+font-family: HarmonyOS Sans SC;
+font-size: 14px;
+font-weight: 400;
+line-height: 16px;
+letter-spacing: 0%;
+text-align: justify;
+}
+.site2 ul li{
+     position: static;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 6;
+    /* margin: 0px 43.25px ; */
+}
+.site2 ul :nth-child(1) li
+{
+    width: 105px;
+    height: 24px;
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+.site2 ul  li:nth-child(2)
+{
+    width: 164px;
+    height: 24px;
+    position: absolute;
+    left: 212px;
+    flex: none;
+order: 1;
+flex-grow: 0;
+
+}
+.site2 ul :nth-child(3) li
+{
+    width: 125px;
+    height: 24px;
+    position: static;
+    flex: none;
+order: 2;
+flex-grow: 0;
+
+}
+.site2 ul :nth-child(4) li
+{
+    width: 66px;
+    height: 24px;
+    position: static;
+    flex: none;
+order: 3;
+flex-grow: 0;
+
+}
+.site2 ul :nth-child(5) li
+{
+    width: 119px;
+    height: 24px;
+    position: static;
+    flex: none;
+order: 4;
+flex-grow: 0;
+
+}
+.site2 ul img
+{
+    position: static;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0 6px;
+}
+.site2 ul p
+{
+    position: static;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+.end span
+{
+  /* 我爱Figma */
+position: absolute;
+left: 601px;
+top: 631px;  
+color: rgb(255, 255, 255);
+font-family: HarmonyOS Sans SC;
+font-size: 16px;
+font-weight: 400;
+line-height: 153.7%;
+letter-spacing: 0%;
+text-align: justify;
+}
+/* #endregion关于我 */
+
+/* #region导航样式 */
+.tobar a:hover ,
+.tobar a[data-target]:target
+{
+    color: red;
+}
+/* #endregion导航样式 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
