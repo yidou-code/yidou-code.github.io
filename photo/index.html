@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #outer
+        {
+            width: 510px;
+         
+            margin: 40px auto;
+            padding:10px;
+            background-color: greenyellow;
+            text-align: center;
+            position: relative;
+        }
+        #outer img
+        {   
+           width: 99.5%;
+           height: 80%;
+        }
+        #outer  #prev
+        {
+            position: absolute;
+            left: 50px;
+            top: 10px;
+        }
+        #outer  #next
+        {
+            position: absolute;
+            right: 50px;
+            top: 10px;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            //点击按钮切换图片
+            var prev = document.getElementById("prev");
+            var next = document.getElementById("next");
+
+            //获取img标签
+            var img = document.getElementsByTagName("img")[0];
+
+            var imgArr = ["./img/1.jpg","./img/2.jpg","./img/3.jpg","./img/4.jpg","./img/5.jpg","./img/6.jpg","./img/7.jpg","./img/8.jpg","./img/9.jpg","./img/10.jpg"]
+            //创建一个变量
+            var index = 0;
+
+
+            var info = document.getElementById("info");
+             info.innerHTML = "一共"+imgArr.length+"图片,当前第"+(index+1)+"张";
+            prev.onclick = function(){
+                //alert('上一张');
+                index--;
+                if(index<0)
+            {
+                index =imgArr.length-1;
+            }
+                img.src = imgArr[index];
+
+                info.innerHTML = "一共"+imgArr.length+"图片,当前第"+(index+1)+"张";
+            };
+            next.onclick = function(){
+                //alert('下一张');
+                index++
+                if(index>imgArr.length-1)
+            {
+                index=0;
+            }
+                //修改图片的src
+                img.src = imgArr[index];
+                info.innerHTML = "一共"+imgArr.length+"图片,当前第"+(index+1)+"张";
+            };
+        };
+    </script>
+</head>
+<body>
+    <div id="outer">
+        <p id="info"></p>
+        <img src="./img/1.jpg" alt="">
+        <button id="prev">上一张</button>
+        <button id="next">下一张</button>
+
+    </div>
+</body>
+</html>
