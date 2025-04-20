@@ -30,7 +30,7 @@ body {
   display: flex;
   border-radius: 25px;
   justify-content: center;
-  background: url(/img/image.png);
+  background: url(/weatherApp/img/image.png);
   background-position: center;
   background-size: cover;
   transform: scale(1.05) perspective(200px);
