@@ -193,7 +193,7 @@ class GuessNumberGame {
       this.guessButton.disabled = true;
       
       // 显示兴趣爱好选择区域
-      if (this.wrongGuessCount <= 10) {
+      if (this.wrongGuessCount <= 7) {
         this.showHobbySection();
       }
     } else {
