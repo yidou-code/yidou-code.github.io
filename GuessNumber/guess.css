@@ -1,0 +1,306 @@
+.success {
+  background-color: #009950;
+  color: #ffffff;
+}
+
+.normal {
+  background-color: #fff;
+  color: #000;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f4f4f9;
+}
+
+.game-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+h1 {
+  color: #333;
+}
+
+h5 {
+  color: #666;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover:not(.disabled) {
+  background-color: #0056b3;
+}
+
+button.disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+input[type="number"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 5px;
+  width: 300px;
+}
+
+.hobby-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-left: 1px solid #eee;
+}
+
+.hobby-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.hobby-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hobby-card.selected {
+  background-color: #007bff;
+  color: white;
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,123,255,0.3);
+}
+
+.hobby-icon {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.hobby-name {
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+
+.confirm-button {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 300px;
+}
+
+/* 自定义模态框样式 */
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+  /* 移除display: none，改用hidden类控制 */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 400px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.modal-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal-button:hover {
+  background-color: #0056b3;
+}
+
+.next-step-content {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+img {
+  width: 50%;
+}
+/* 新增：密钥验证消息样式 */
+/* 密钥输入区域样式 */
+.key-section {
+  margin: 20px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.key-container {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  padding: 10px 20px;
+  width: 100%;
+  max-width: 300px;
+  transition: all 0.3s ease;
+}
+
+.key-container:hover {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.key-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.key-icon {
+  font-size: 16px;
+  margin-right: 10px;
+  color: #007bff;
+}
+
+.key-header h3 {
+  margin: 0;
+  color: #333;
+}
+
+.key-input-container {
+  display: flex;
+  gap: 6px;
+}
+
+.key-input {
+  flex: 1;
+  padding: 6px 8px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 10px;
+  transition: border-color 0.3s ease;
+}
+
+.key-input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.key-button {
+  padding: 6px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.key-button:hover {
+  background-color: #0056b3;
+}
+
+.key-button:active {
+  transform: translateY(1px);
+}
+
+.key-message {
+  margin-top: 5px;
+  padding: 4px 6px;
+  border-radius: 5px;
+  font-size: 8px;
+  transition: all 0.3s ease;
+}
+
+.key-message.hidden {
+  opacity: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.key-message.success {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border-left: 2px solid #2e7d32;
+}
+
+.key-message.error {
+  background-color: #ffebee;
+  color: #c62828;
+  border-left: 2px solid #c62828;
+}
+.anime-image {
+  max-width: 100%;
+  height: auto;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}

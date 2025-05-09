@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>猜数字游戏</title>
+  <link rel="stylesheet" href="/GuessNumber/guess.css">
+</head>
+
+<body>
+
+
+
+
+
+
+
+
+  <div class="game-container">
+    <h1>猜数字</h1>
+    <h5>系统会随机选定一个100以内的自然数。通过输入数字来猜它。<br/>每次系统会告诉你猜的结果是高了还是低了</h5>
+    <br>
+    <h4>提示：按空格开始游戏，回车键确定选择数字<br>五次以内才对开启隐藏界面，欢迎挑战</h4>
+    <!-- 新增：密钥输入区域 -->
+  <!-- 新增：美化后的密钥输入区域 -->
+<div class="key-section">
+  <div class="key-container">
+    <div class="key-header">
+      <span class="key-icon">🔑</span>
+      <h3>管理员访问</h3>
+    </div>
+    <div class="key-input-container">
+      <input type="password" id="adminKey" placeholder="输入管理员密钥" class="key-input">
+      <button id="verifyKey" class="key-button">验证</button>
+    </div>
+    <div id="keyMessage" class="key-message hidden"></div>
+  </div>
+</div>
+
+
+
+
+
+    <div>
+      <button id="startButton">开始游戏</button>
+    </div>
+    <span>请输入：</span>
+    <input type="number" id="input">
+    <button id="guessButton">确定</button>
+    <h5>输入结果：</h5>
+    <div>
+      <textarea rows="1" cols="30" id="result"></textarea>
+    </div>
+    <div>
+      <textarea rows="5" cols="30" id="output"></textarea>
+    </div>
+  </div>
+
+
+  
+  <!-- 兴趣爱好选择区域 -->
+  <div id="hobbySection" class="hobby-section hidden">
+    <h3>选择你的兴趣爱好</h3>
+    <div class="hobby-grid">
+      <div class="hobby-card" data-hobby="音乐">
+        <div class="hobby-icon">🎵</div>
+        <div class="hobby-name">音乐</div>
+      </div>
+      <div class="hobby-card" data-hobby="运动">
+        <div class="hobby-icon">🏃</div>
+        <div class="hobby-name">运动</div>
+      </div>
+      <div class="hobby-card" data-hobby="绘画">
+        <div class="hobby-icon">🎨</div>
+        <div class="hobby-name">绘画</div>
+      </div>
+      <div class="hobby-card" data-hobby="旅行">
+        <div class="hobby-icon">✈️</div>
+        <div class="hobby-name">旅行</div>
+      </div>
+      <div class="hobby-card" data-hobby="游戏">
+        <div class="hobby-icon">🎮</div>
+        <div class="hobby-name">游戏</div>
+      </div>
+      <div class="hobby-card" data-hobby="动漫">
+        <div class="hobby-icon">🎬</div>
+        <div class="hobby-name">动漫</div>
+     
+      </div>
+    </div>
+    <button id="confirmHobby" class="confirm-button disabled">确认选择</button>
+  </div>
+
+  <!-- 自定义模态框 -->
+  <div id="customModal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 id="modalTitle">提示</h2>
+      <p id="modalMessage"></p>
+      <div class="modal-buttons">
+        <button id="modalConfirm" class="modal-button">确认</button>
+        <button id="modalCancel" class="modal-button hidden">取消</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 下一步操作区域 -->
+  <div id="nextStepSection" class="hobby-section hidden">
+    <h3 id="nextStepTitle">下一步操作</h3>
+    <div id="nextStepContent" class="next-step-content">
+      <!-- 内容将由JS动态填充 -->
+    </div>
+    <button id="backToGame" class="confirm-button">返回游戏</button>
+  </div>
+
+  <script src="/GuessNumber/guessNum.js"></script>
+</body>
+
+</html>
