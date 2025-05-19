@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>玩的开心</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: #1a1a1a;
+        }
+        
+        #player {
+            width: 50px;
+            height: 50px;
+            background: #00ffaa;
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            border-radius: 10px;
+            transition: 0.1s;
+            font-size: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .obstacle {
+            width: 30px;
+            height: 30px;
+            background: #ff4444;
+            position: absolute;
+            border-radius: 50%;
+            animation: fall 3s linear;
+        }
+        
+        #score {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            color: white;
+            font-family: Arial;
+            font-size: 24px;
+        }
+        
+        @keyframes fall {
+            from { top: -30px; }
+            to { top: 100vh; }
+        }
+    </style>
+</head>
+<body>
+    <div id="score">得分: 0</div>
+    <div id="player">😊</div>
+
+    <script>
+        const player = document.getElementById('player');
+        let score = 0;
+        let isGameOver = false;
+
+        // 移动控制
+        document.addEventListener('mousemove', (e) => {
+            if(!isGameOver) {
+                player.style.left = e.clientX - 25 + 'px';
+            }
+        });
+
+        // 生成障碍物
+        function createObstacle() {
+            const obstacle = document.createElement('div');
+            obstacle.className = 'obstacle';
+            obstacle.style.left = Math.random() * (window.innerWidth - 30) + 'px';
+            obstacle.textContent = '🔥'; // 红温表情
+            
+            obstacle.addEventListener('animationend', () => {
+                if(!isGameOver) {
+                    score++;
+                    document.getElementById('score').textContent = `得分: ${score}`;
+                }
+                obstacle.remove();
+            });
+
+            // 碰撞检测
+            const checkCollision = setInterval(() => {
+                const playerRect = player.getBoundingClientRect();
+                const obstacleRect = obstacle.getBoundingClientRect();
+                
+                if (
+                    playerRect.left < obstacleRect.right &&
+                    playerRect.right > obstacleRect.left &&
+                    playerRect.top < obstacleRect.bottom &&
+                    playerRect.bottom > obstacleRect.top
+                ) {
+                    gameOver();
+                    clearInterval(checkCollision);
+                }
+            }, 10);
+
+            document.body.appendChild(obstacle);
+        }
+
+        function gameOver() {
+            isGameOver = true;
+            player.textContent = '💥';
+            document.body.innerHTML += `
+                <div style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); 
+                           background: rgba(0,0,0,0.8); color: white; padding: 20px; text-align: center;
+                           border-radius: 10px;">
+                    <h2>游戏结束！</h2>
+                    <p>最终得分: ${score}</p>
+                    <button onclick="location.reload()" style="padding: 10px 20px; 
+                            background: #4CAF50; border: none; color: white; cursor: pointer;">
+                        再试一次
+                    </button>
+                    <p>嘿嘿！轻松点了吧</p>
+                </div>
+            `;
+        }
+
+        // 每1秒生成障碍物
+        setInterval(createObstacle, 1000);
+
+        // 初始障碍物
+        createObstacle();
+    </script>
+</body>
+</html>
